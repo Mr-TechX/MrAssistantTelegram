@@ -1,7 +1,7 @@
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // AUTHOR : Mr TechX | TecnoProjects
 // PROJECT : Mr. Assistant (Telegram Version)
-// VERSION : 1.0.1
+// VERSION : 1.0.2
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // WENAS EXTRAÑO QUE ESTÁ LEYENDO MI CODIGO :)
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -63,7 +63,7 @@ bot.command('clases', (ctx) => {
 
 //----------------[Comandos Centrales]----------------
 bot.start((ctx) => 
-    ctx.reply('Hola Bienvenid@ ' + ctx.from.first_name + ' ' + ctx.from.last_name + ',' + ' soy MrAssistant, soy un Bot :), puedes ejecutar el comando /cmds para ver mi lista de comandos')
+    ctx.reply('Hola Bienvenid@ ' + ctx.from.first_name + ',' + ' soy MrAssistant, soy un Bot :), puedes ejecutar el comando /cmds para ver mi lista de comandos')
 );
 
 // bot.command('cmds', (ctx) => {
@@ -89,11 +89,11 @@ bot.command('hola', (ctx) => {
 });
 
 bot.command('version', (ctx) => {
-    ctx.reply("Actualmente estoy en mi verison 1.0.1 que fue lanzada el 16/ago/2021 por TecnoProjects")
+    ctx.reply("Actualmente estoy en mi verison 1.0.2 que fue lanzada el 17/ago/2021 por TecnoProjects")
 });
 
 bot.command('version_logs', (ctx) => {
-    ctx.reply("En esta version fue mejorada mi funcionalidad, aunque para los usuarios sea casi lo mismo, dentro de mi codigo hay muchas diferéncias")
+    ctx.reply("Actualiazación de comandos, mejora de funcionamiento y modificaciones internas")
 });
 
 bot.command('my_code', (ctx) => {
@@ -160,24 +160,24 @@ bot.command('all_cryptos', (ctx) => {
 // });
 
 bot.command('clases_lunes', (ctx) => {
-    ctx.reply("Lunes 1:00 Fisica - prof. Mario Becerra (https://meet.google.com/kjw-rnhw-ygk)")
+    ctx.reply("Lunes 7:30 Mod4 Sub1 - prof. Gerardo Sánchez (https://meet.google.com/itj-kdme-fzp)")
 });
 
 bot.command('clases_martes', (ctx) => {
-    ctx.reply("Martes 7:30 Inglés y Titulación - prof. Juana Bernal (https://meet.google.com/tej-uriq-ysd)")
+    ctx.reply("Martes 7:30 Inglés y Titulación - prof. Juana Bernal (https://meet.google.com/bjn-yqre-oyq)")
 
-    ctx.reply("Martes 11:10 Habilidades Digitales - prof. Rocío Sánchez (https://meet.google.com/ptx-wuri-byv)")
-
-    ctx.reply("Una disculpa en caso de que lleguen desordenados perdon, yo no puedo controlar eso :)")
+    ctx.reply("Martes 11:20 Habilidades Digitales - prof. Rocío Sánchez (https://meet.google.com/ptx-wuri-byv)")
 });
 
+bot.command('clases_miercoles', (ctx) => {
+    ctx.reply("Miercoles 1:00 Fisica - prof Mario Becerra (https://meet.google.com/kjw-rnhw-ygk)")
+})
+
 bot.command('clases_jueves', (ctx) => {
-    ctx.reply("Jueves 7:30 Mod4 Sub1 - prof. Gerardo Sánchez (https://meet.google.com/itj-kdme-fzp)")
+    ctx.reply("Jueves 7:30 Mod4 Sub2 - prof Andre Sánchez (https://meet.google.com/waz-qjfs-tmt)")
 });
 
 bot.command('clases_viernes', (ctx) => {
-    ctx.reply("Viernes 7:30 Mod4 Sub2 - prof. Andre Sanchez (https://meet.google.com/waz-qjfs-tmt)")
-
     ctx.reply("Viernes 11:20 Calculo Integral - prof. Carlos Briones (https://meet.google.com/rzg-xscm-bsj)")
 
     ctx.reply("Viernes 1:00 CTSyV - prof. Armando Monrroy (https://meet.google.com/qdr-ngbz-pgc)")
@@ -188,7 +188,7 @@ bot.command('clases_viernes', (ctx) => {
 bot.command('all_clases', (ctx) => {
     ctx.reply("Lunes 7:30 Mod4 Sub1 - prof. Gerardo Sánchez (https://meet.google.com/itj-kdme-fzp)")
 
-    ctx.reply("Martes 7:30 Inglés y Titulación - prof. Juana Bernal (https://meet.google.com/tej-uriq-ysd)")
+    ctx.reply("Martes 7:30 Inglés y Titulación - prof. Juana Bernal (https://meet.google.com/bjn-yqre-oyq)")
 
     ctx.reply("Martes 11:20 Habilidades Digitales - prof. Rocío Sánchez (https://meet.google.com/ptx-wuri-byv)")
 
