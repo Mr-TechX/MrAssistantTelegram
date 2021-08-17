@@ -1,7 +1,7 @@
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // AUTHOR : Mr TechX | TecnoProjects
 // PROJECT : Mr. Assistant (Telegram Version)
-// VERSION : 1.0.0
+// VERSION : 1.0.1
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // WENAS EXTRAÑO QUE ESTÁ LEYENDO MI CODIGO :)
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -89,7 +89,7 @@ bot.command('hola', (ctx) => {
 });
 
 bot.command('version', (ctx) => {
-    ctx.reply("Actualmente estoy en mi verison 1.0.0 que fue lanzada el 13/ago/2021 por TecnoProjects")
+    ctx.reply("Actualmente estoy en mi verison 1.0.1 que fue lanzada el 16/ago/2021 por TecnoProjects")
 });
 
 bot.command('version_logs', (ctx) => {
@@ -186,15 +186,15 @@ bot.command('clases_viernes', (ctx) => {
 });
 
 bot.command('all_clases', (ctx) => {
-    ctx.reply("Lunes 1:00 Fisica- prof. Mario Becerra (https://meet.google.com/kjw-rnhw-ygk)")
+    ctx.reply("Lunes 7:30 Mod4 Sub1 - prof. Gerardo Sánchez (https://meet.google.com/itj-kdme-fzp)")
 
     ctx.reply("Martes 7:30 Inglés y Titulación - prof. Juana Bernal (https://meet.google.com/tej-uriq-ysd)")
 
-    ctx.reply("Martes 11:10 Habilidades Digitales - prof. Rocío Sánchez (https://meet.google.com/ptx-wuri-byv)")
+    ctx.reply("Martes 11:20 Habilidades Digitales - prof. Rocío Sánchez (https://meet.google.com/ptx-wuri-byv)")
 
-    ctx.reply("Jueves 7:30 Mod4 Sub1 - prof. Gerardo Sánchez (https://meet.google.com/itj-kdme-fzp)")
+    ctx.reply("Miercoles 1:00 Fisica - prof Mario Becerra (https://meet.google.com/kjw-rnhw-ygk)")
 
-    ctx.reply("Viernes 7:30 Mod4 Sub2 - prof. Andre Sanchez (https://meet.google.com/waz-qjfs-tmt)")
+    ctx.reply("Jueves 7:30 Mod4 Sub2 - prof Andre Sánchez (https://meet.google.com/waz-qjfs-tmt)")
 
     ctx.reply("Viernes 11:20 Calculo Integral - prof. Carlos Briones (https://meet.google.com/rzg-xscm-bsj)")
 
