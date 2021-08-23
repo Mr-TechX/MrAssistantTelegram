@@ -1,9 +1,9 @@
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // AUTHOR : Mr TechX | TecnoProjects
 // PROJECT : Mr. Assistant (Telegram Version)
-// VERSION : 1.0.2
+// VERSION : 1.0.3
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// WENAS EXTRAÑO QUE ESTÁ LEYENDO MI CODIGO :)
+// HOLAA EXTRAÑO QUE ESTÁ LEYENDO MI CODIGO :)
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
@@ -26,7 +26,12 @@ const config = require("./config/config.json");
 const bot = new Telegraf(config.token);
 
 //----------------[Variables]----------------
-
+let btcvar = "49837.80 USD - 1015615.62 MXN";
+let ethvar = "3329.83 USD - 67856.67 MXN";
+let xmrvar = "327.58 USD - 6675.56 MXN";
+let ltcnvar = "187.33 USD - 3817.49 MXN";
+let dogevar = "0.32 USD - 6.52 MXN";
+let fecha = "(actualización 23/ago/2021)";
 
 //--------------[Mensaje de Consola]--------------
 console.log("MrAssistant Activado")
@@ -62,9 +67,14 @@ bot.command('clases', (ctx) => {
 });
 
 //----------------[Comandos Centrales]----------------
-bot.start((ctx) => 
+bot.start((ctx) => {
+    console.log(ctx.form)
+    console.log(ctx.chat)
+    console.log(ctx.message)
+    console.log(ctx.updateSubTypes)
+
     ctx.reply('Hola Bienvenid@ ' + ctx.from.first_name + ',' + ' soy MrAssistant, soy un Bot :), puedes ejecutar el comando /cmds para ver mi lista de comandos')
-);
+});
 
 // bot.command('cmds', (ctx) => {
 //     ctx.reply("Mis comandos son:")
@@ -89,7 +99,7 @@ bot.command('hola', (ctx) => {
 });
 
 bot.command('version', (ctx) => {
-    ctx.reply("Actualmente estoy en mi verison 1.0.2 que fue lanzada el 17/ago/2021 por TecnoProjects")
+    ctx.reply("Actualmente estoy en mi verison 1.0.3 que fue lanzada el 23/ago/2021 por TecnoProjects")
 });
 
 bot.command('version_logs', (ctx) => {
@@ -126,34 +136,33 @@ bot.command('dev_networks', (ctx) => {
 // });
 
 bot.command('precio_bitcoin', (ctx) => {
-    ctx.reply("Bitcoin - 46345.60 USD - 920393.03 MXN (actualizacion 19/08/2021)")
+    ctx.reply("Bitcoin | " + btcvar + " " + fecha)
 });
 
 bot.command('precio_ethereum', (ctx) => {
-    ctx.reply("Ethereum - 3208.06 USD - 63709.95 MXN (actualizacion 19/08/2021)")
+    ctx.reply("Ethereum | " + ethvar + " " + fecha)
 });
 
 bot.command('precio_monero', (ctx) => {
-    ctx.reply("Monero - 264.70 USD - 5256.77 MXN (actualizacion 19/08/2021)")
+    ctx.reply("Monero | " + xmrvar + " " + fecha)
 });
 
 bot.command('precio_litecoin', (ctx) => {
-    ctx.reply("Litecoin - 178.70 USD - 3548.86 MXN (actualizacion 19/08/2021)")
+    ctx.reply("Litecoin | " + ltcnvar + " " + fecha)
 });
 
 bot.command('precio_dogecoin', (ctx) => {
-    ctx.reply("Dogecoin - 0.25 USD - 4.96 MXN (actualizacion 19/08/2021)")
+    ctx.reply("Dogecoin | " + dogevar + " " + fecha)
 });
 
 bot.command('all_cryptos', (ctx) => {
-    ctx.reply("ACTUALIZACIÓN 13/08/2021")
-    ctx.reply("Bitcoin - 46345.60 USD - 920393.03 MXN")
-    ctx.reply("Ethereum - 3208.06 USD - 63709.95 MXN")
-    ctx.reply("Monero - 264.70 USD - 5256.77 MXN")
-    ctx.reply("Litecoin - 178.70 USD - 3548.86 MXN")
-    ctx.reply("Dogecoin - 0.25 USD - 4.96 MXN")
+    ctx.reply("ACTUALIZACIÓN 23/08/2021")
+    ctx.reply("Bitcoin | " + btcvar)
+    ctx.reply("Ethereum | " + ethvar)
+    ctx.reply("Monero | " + xmrvar)
+    ctx.reply("Litecoin | " + ltcnvar)
+    ctx.reply("Dogecoin | " + dogevar)
 });
-
 //--------------[Comandos Clases]--------------
 // bot.command('clases', (ctx) => {
 //     ctx.reply("Puedes ejecutar el comando /all_clases para ver el listado de todas las clases pero yo te recomendaria usar los comandos /clases_lunes, /clases_martes etc. para no saturarte de mensajes, pero ejecuta el que gustes, solo es una recomendación :)")
@@ -180,7 +189,7 @@ bot.command('clases_jueves', (ctx) => {
 bot.command('clases_viernes', (ctx) => {
     ctx.reply("Viernes 11:20 Calculo Integral - prof. Carlos Briones (https://meet.google.com/rzg-xscm-bsj)")
 
-    ctx.reply("Viernes 1:00 CTSyV - prof. Armando Monrroy (https://meet.google.com/qdr-ngbz-pgc)")
+    ctx.reply("Viernes 7:30 / 1:00 CTSyV - prof. Armando Monrroy (https://meet.google.com/qdr-ngbz-pgc)")
 
     ctx.reply("Una disculpa en caso de que lleguen desordenados perdon, yo no puedo controlar eso :)")
 });
@@ -198,7 +207,7 @@ bot.command('all_clases', (ctx) => {
 
     ctx.reply("Viernes 11:20 Calculo Integral - prof. Carlos Briones (https://meet.google.com/rzg-xscm-bsj)")
 
-    ctx.reply("Viernes 1:00 CTSyV - prof. Armando Monrroy (https://meet.google.com/qdr-ngbz-pgc)")
+    ctx.reply("Viernes 7:30 / 1:00 CTSyV - prof. Armando Monrroy (https://meet.google.com/qdr-ngbz-pgc)")
     
     ctx.reply("Una disculpa en caso de que lleguen desordenados perdon, yo no puedo controlar eso :)")
 });
