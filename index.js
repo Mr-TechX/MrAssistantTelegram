@@ -74,7 +74,7 @@ bot.start((ctx) => {
     console.log(ctx.message)
     console.log(ctx.updateSubTypes)
 
-    ctx.reply('Hola Bienvenid@ ' + ctx.from.first_name + ',' + ' soy MrAssistant, soy un Bot :), puedes ejecutar el comando /cmds para ver mi lista de comandos')
+    ctx.reply('Hola Bienvenid@ ' + ctx.from.first_name + ',' + ' soy MrAssistant, soy un Bot :), puedes ejecutar el comando /m_cmds para ver mi lista de comandos')
 });
 
 // bot.command('cmds', (ctx) => {
@@ -96,11 +96,11 @@ bot.command('m_status', (ctx) => {
 });
 
 bot.command('m_hola', (ctx) => {
-    ctx.reply("Holaaa!! Soy MrAssistant")
+    ctx.reply("Holaaa!! " + ctx.from.first_name + " Soy MrAssistant")
 });
 
 bot.command('m_version', (ctx) => {
-    ctx.reply("Actualmente estoy en mi verison 1.0.4 que fue lanzada el 3/Sep/2021 por TecnoProjects | @MrTechX")
+    ctx.reply("Actualmente estoy en mi verison 1.0.4 que fue lanzada el 3/Sep/2021 por TecnoProjects | @Mr_TechX")
 });
 
 bot.command('m_version_logs', (ctx) => {
